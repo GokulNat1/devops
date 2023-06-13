@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devsecops-service
+spec:
+  type: LoadBalancer
+  #loadBalancerIP: 40.121.183.52
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  selector:
+    app: accelerator
+  #externalIPs: 
+    #- 20.85.161.227
